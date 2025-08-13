@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 245, 245);
+}
+
+/* .quadrado{
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    padding: 25px;
+    background-color: blueviolet;
+    bottom: 2px;
+    position: relative;
+    cima direita baixo esquerda 
+} */
+
+ .quadradinho{
+    background-color: rgb(127, 0, 0);
+    width: 100%;
+    padding: 30px;
+    /* height: 10%; */
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+} 
+
+.flex{
+    font-size: 40px;
+    color: aliceblue;
+    display: flex;
+    margin-left: 30px;
+}
+
+.photo{
+    border-radius: 500px;
+    height: 100px;
+    width: 70px;
+    height: auto;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
