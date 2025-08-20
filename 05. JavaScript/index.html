@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=scr, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-        const name = "Anna";
-        const age = 18;
-        let arr = [];
-        let girls = ["Guerra", 18, true];
+    <body>
+        <script>
+            const name = "Anna";
+            const age = 18;
+            let arr = [];
+            let girls = ["Guerra", 18, true];
 
-        const obj = {
-            name: "Anna", 
-            age: 18,
-            Work: "Bosch"
-        };
-        
-        console.log(obj.Work);
-        console.log(girls[0]);
-        console.log("My name is " + name + " and I'm " + age + " years old" );
+            const obj = {
+                name: "Anna", 
+                age: 18,
+                Work: "Bosch",
+                family:{
+                    Father: "Marcio",
+                    Mother: "Jane",
+                    Brother: "Victor",
+                    Boyfriend: "Leoleo"
+                }
+            };
+            function sum(x,y){
+                return x + y;
+            }
+            const sumArrow = (a,b) => a + b;
 
-    </script>
-</body>
+            console.log("My bf's name is " + obj.family.Boyfriend); 
+            console.log(obj.Work);
+            console.log(girls[0]);
+            console.log("My name is " + name + " and I'm " + age + " years old" );
+            console.log("A soma de 2 + 2 = " + sum(2,2));
+            console.log("A soma de 3 + 3 = " + sumArrow(3,3));
+            
+        </script>
+    </body>
 </html>
