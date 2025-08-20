@@ -45,10 +45,10 @@ console.log("A soma de 3 + 3 = " + sumArrow(3,3));
 let title = document.getElementById('element1').innerHTML;
 console.log(title);
 
-const receiveText = () => {
-    let inputText = document.getElementById('input')
-    console.log(inputText);
-}
+// const receiveText = () => {
+//     let inputText = document.getElementById('input')
+//     console.log(inputText);
+// }
 
 const changecolor = () => {
     let csquare = document.getElementById('circle1');
