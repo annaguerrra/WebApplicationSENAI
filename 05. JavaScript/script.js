@@ -44,3 +44,8 @@ console.log("A soma de 3 + 3 = " + sumArrow(3,3));
 // getElementbyId("id")
 let title = document.getElementById('element1').innerHTML;
 console.log(title);
+
+const receiveText = () => {
+    let inputText = document.getElementById('input')
+    console.log(inputText);
+}
