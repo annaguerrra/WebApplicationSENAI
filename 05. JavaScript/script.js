@@ -49,3 +49,15 @@ const receiveText = () => {
     let inputText = document.getElementById('input')
     console.log(inputText);
 }
+
+const changecolor = () => {
+    let csquare = document.getElementById('circle1');
+    if(csquare.className == "circle ok"){
+        csquare.classList.remove("ok");
+        csquare.classList.add("bad");
+    }
+    else{
+        csquare.classList.remove("bad");
+        csquare.classList.add("ok");
+    }
+}

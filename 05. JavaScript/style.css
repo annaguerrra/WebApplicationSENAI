@@ -1,3 +1,18 @@
 h1{
     color: rgb(139, 9, 9);
 }
+
+.circle{
+    background-color: rgb(250, 224, 228);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.ok{
+    background-color: rgb(170, 245, 186);
+}
+
+.bad{
+    background-color: rgb(241, 178, 154);
+}
