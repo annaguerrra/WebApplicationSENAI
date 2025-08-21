@@ -21,7 +21,6 @@ const AddTask = () => {
     checkTask.style.color = "rgb(129, 199, 25)";
     checkTask.style.border = "none";
     checkTask.style.background = "none";
-    checkTaskstyle.flexDirection = "row"
 
     checkTask.onclick = () => {
         li.classList.toggle("checked");
@@ -39,8 +38,6 @@ const AddTask = () => {
     deleteTask.style.marginLeft = "10px";
     deleteTask.style.border = "none";
     deleteTask.style.background = "none";
-    deleteTask.style.flexDirection = "row"
-
     deleteTask.onclick = () => {
         li.remove();
     };
