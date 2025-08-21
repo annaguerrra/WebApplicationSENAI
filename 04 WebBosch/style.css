@@ -26,20 +26,62 @@ header{
         justify-content: center;
 }
 
+h1{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: #ea1c25;
+    color: whitesmoke;
+
+    width: 70px;
+    height: 43px;
+     /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 5px 30px 30px 5px;
+    margin-top: 20px;
+    padding: 12px 30px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
 .input {
     background-color: rgba(101, 101, 102, 0.363);
-    color: white;
+    color: whitesmoke;
     border: 1px solid #6d6d6d;
     outline: none;
     box-shadow: 0 2px 4px rgba(94, 94, 94, 0.596);
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease;
     
-    margin-top: 250px;
+    margin-top: 20px;
     padding: 12px 20px;
-    width: 600px;
-    border-radius: 35px;
-
+    width: 250px;
+    border-radius: 30px 5px 5px 30px ;
 }
 
+#tasklist {
+    width: 280px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: decimal;
+}
+
+#tasklist li {
+    background-color: rgba(101, 101, 102, 0.363); 
+    font-family: Arial, Helvetica, sans-serif ;
+    color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    
+    width: 250px;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
 
 

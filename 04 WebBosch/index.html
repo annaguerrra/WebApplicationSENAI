@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    <header class = "header">
-        <img src="logo.png" alt="logo" width="200">
+
+    <header class="header">
+        <img 
+        src="logo.png" 
+        alt="logo" 
+        width="200">
     </header>
-    <div class="background">
-        <img src="bosch-background.jpg" alt="background" width="500
-        ">
-    </div>
-    <div class="content">
-        <input class="input" type="text" name = "search" placeholder = "Search">
-    </div>
 
-    <div class="img">
-        <img src="" alt="">
-    </div>
+    <main>   
+        <h1>
+            <img 
+            src="check img.png" 
+            alt="check" 
+            width="35">
 
+            <b>To-Do List<b>      
+        </h1>
+
+        <div class="content">
+            <input 
+            class="input" 
+            type="text" 
+            name="search" 
+            placeholder="Add task..."
+            id="input">
+
+            <button type="button" onclick="AddTask()" id="addbutton">Add</button>
+        </div>
+
+        <script src="script.js"></script>
+
+        <ul 
+            id="tasklist">
+            <button type="button" onclick="" id="checkbutton" class = "checkbutton">✔</button>
+        </ul>
+
+    </main>
+    
 </body>
 </html>
