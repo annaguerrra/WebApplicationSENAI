@@ -10,20 +10,41 @@ const AddTask = () => {
 
     document.getElementById('input').value = '';
 
-    let check = document.createElement('check');
-    check.id = "check";
+    let checkTask = document.createElement('button');
+    checkTask.id = "check";
 
-    check.textContent = "✔";
-    check.style.cursor = "pointer";
-    check.style.display = "flex";
-    check.style.fontSize = "20px";
-    check.style.marginLeft = "10px";
-    check.style.color = "rgb(129, 199, 25)";
+    checkTask.textContent = "✔";
+    checkTask.style.cursor = "pointer";
+    checkTask.style.display = "flex";
+    checkTask.style.fontSize = "20px";
+    checkTask.style.marginLeft = "10px";
+    checkTask.style.color = "rgb(129, 199, 25)";
+    checkTask.style.border = "none";
+    checkTask.style.background = "none";
+    checkTaskstyle.flexDirection = "row"
 
-    check.onclick = () => {
+    checkTask.onclick = () => {
         li.classList.toggle("checked");
     };
 
-    li.appendChild(check);
+    li.appendChild(checkTask);
 
+    let deleteTask = document.createElement('button');
+    deleteTask.id = "deleteb";
+
+    deleteTask.textContent = "🗑️"
+    deleteTask.style.cursor = "pointer";
+    deleteTask.style.display = "flex";
+    deleteTask.style.fontSize = "20px"
+    deleteTask.style.marginLeft = "10px";
+    deleteTask.style.border = "none";
+    deleteTask.style.background = "none";
+    deleteTask.style.flexDirection = "row"
+
+    deleteTask.onclick = () => {
+        li.remove();
+    };
+
+    li.appendChild(deleteTask);
 };
+
