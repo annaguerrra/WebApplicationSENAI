@@ -1,8 +1,8 @@
 import './BlueSquare.css';
 
-export const BlueSquare = () => {
+export const BlueSquare = ({color}) => {
     return(
-         <div className='blue'></div>   
+         <div className='blue' style={{backgroundColor: color}}></div>   
     )
 }
 

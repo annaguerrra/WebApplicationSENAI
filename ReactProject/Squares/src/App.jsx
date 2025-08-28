@@ -11,9 +11,9 @@ function App() {
 
   return (
     <>
-      <BlueSquare />
-      <RedSquare/>
-      <YellowSquare/>
+      <BlueSquare color = "rgb(0, 131, 192)" />
+      <RedSquare color = "rgb(231, 189, 0)"/>
+      <YellowSquare color = "rgb(187, 0, 0)"/>
     </>
   )
 }

@@ -1,8 +1,8 @@
 import './YellowSquare.css'
 
-export const YellowSquare = () =>{
+export const YellowSquare = ({color}) =>{
     return(
-        <div className='yellow'>
+        <div className='yellow' style={{backgroundColor: color}}>
         </div>
     )
 }
