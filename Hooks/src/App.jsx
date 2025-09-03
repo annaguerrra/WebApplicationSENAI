@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [text , setText] = useState("")
   const [hidden, setHidden] = useState(false) // setar invisibilidade
-  const [change, setChange] = useState(false)
+  const [color, setChange] = useState("red")
 
   return (
     <>
@@ -19,6 +19,14 @@ function App() {
 
     <button onClick={() => {setHidden(hidden == true ? false : true)}}>
       Change Visibility
+    </button>
+
+    <div style={{backgroundColor: color,color : 'white'}}>
+      Changing colors
+    </div>
+
+    <button onClick={() => {setChange(color == "red" ? "white": "red")}}>
+      Change Color
     </button>
     </>
   )
