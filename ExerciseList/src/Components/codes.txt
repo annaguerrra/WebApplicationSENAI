@@ -1,0 +1,159 @@
+01 Timer
+
+function App() {
+  const [time, setTime] = useState(new Date()); // guarda hora atual, atualizará tela (setTime)
+
+  useEffect(() => {
+    const repeat = setInterval(() => { // roda o código a cada 1sec
+      setTime(new Date());  // atualiza a hora para agora
+    }, 1000);
+
+    return () => clearInterval(repeat) // limpa o timer quando o componente sai da tela (boa prática)
+  }, []) // só roda esse efeito uma vez quando o componente aparece, se nao colocar ele cria vários timers sem parar e buga
+
+  // mostra a hora no formato fofo la hh:mm:mlml
+  return (
+    <>
+      <div style={{backgroundColor: 'gray', color: 'white', borderRadius: '10px', padding: '15px'}}>
+        <h1>Timer {time.toLocaleTimeString()}</h1>  
+      </div>     
+    </>
+  )
+}
+
+02 Timer Regressivo
+
+function App() {
+  const [input, setInput] = useState(10); // textbox
+  const [time, setTime] = useState(0);    // timer (em segundos)
+  const [running, setRunning] = useState(false); // controle start/pause
+  const [done, setDone] = useState(false); // terminou?
+
+  useEffect(() => {
+    let interval;
+
+    if (running && time > 0) {
+      interval = setInterval(() => {
+        setTime((prev) => prev - 1);
+      }, 1000);
+    }
+
+    if (time === 0 && running) {
+      setRunning(false);
+      setDone(true);
+    }
+
+    return () => clearInterval(interval);
+  }, [running, time]);
+
+  const startTimer = () => {
+    setTime(parseInt(input) || 0);
+    setRunning(true);
+    setDone(false);
+  };
+
+  const pauseTimer = () => {
+    setRunning(false);
+  };
+
+  const resetTimer = () => {
+    setRunning(false);
+    setDone(false);
+    setTime(parseInt(input) || 0);
+  };
+
+  return (
+    <div
+      style={{
+        backgroundColor: "gray",
+        color: "white",
+        borderRadius: "10px",
+        padding: "20px",
+        textAlign: "center",
+        width: "300px",
+        margin: "50px auto"
+      }}
+    >
+      <h1>⏳ Timer</h1>
+
+      {/* textbox */}
+      <input
+        type="number"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        style={{ padding: "5px", borderRadius: "5px", marginRight: "10px" }}
+      />
+
+      {/* botões */}
+      <div style={{ margin: "15px 0" }}>
+        <button
+          onClick={startTimer}
+          style={{
+            backgroundColor: "#00bfff",
+            color: "white",
+            border: "none",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            cursor: "pointer",
+            marginRight: "5px"
+          }}
+        >
+          Start
+        </button>
+
+        <button
+          onClick={pauseTimer}
+          style={{
+            backgroundColor: "#ffa500",
+            color: "white",
+            border: "none",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            cursor: "pointer",
+            marginRight: "5px"
+          }}
+        >
+          Pause
+        </button>
+
+        <button
+          onClick={resetTimer}
+          style={{
+            backgroundColor: "#ff4444",
+            color: "white",
+            border: "none",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            cursor: "pointer"
+          }}
+        >
+          Reset
+        </button>
+      </div>
+
+      {/* display do tempo */}
+      <h2
+        style={{
+          fontSize: "2em",
+          marginTop: "20px",
+          color: done ? "red" : "white",
+          animation: done ? "blink 1s infinite" : "none"
+        }}
+      >
+        {time}s
+      </h2>
+
+      {/* efeito final */}
+      <style>
+        {`
+          @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+        `}
+      </style>
+    </div>
+  )
+}
+
