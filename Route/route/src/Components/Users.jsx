@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 export const Users = () => {
     const {name} = useParams();
-    const {id} = useParams();
+    const [job, setJob] = useEffect("");
+
+    useEffect(() => {
+        if(id == 1)
+        
+    })
+
+
     return (
         <>
-            <h1>Username: {name}   ID: {id}</h1>
+        let job;
+            <h1>Username: {name}  Profissão: {job}  ID: {id}</h1>
         </>
     )
 }

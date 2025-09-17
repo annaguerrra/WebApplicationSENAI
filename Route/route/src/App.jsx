@@ -19,7 +19,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path='/Users/:name/:id' element = {<Users/>}> </Route>
+        <Route path='/Users/:name/:job/:id' element = {<Users/>}> </Route>
       </Routes>
       </BrowserRouter>
 
