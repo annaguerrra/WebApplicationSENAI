@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import {BrowserRouter, Link, Route, Routes, useParams} from 'react-router-dom'
 import {Users} from './Components/Users'
 import './App.css'
+import { UserList } from './Components/UserList'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
       <Routes>
         <Route path='/Users/:name/:job/:id' element = {<Users/>}> </Route>
+        <Route path='/userlist' element = {<UserList/>}> </Route>
       </Routes>
       </BrowserRouter>
 
