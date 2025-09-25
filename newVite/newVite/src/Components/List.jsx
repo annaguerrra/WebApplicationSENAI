@@ -32,8 +32,7 @@ function List() {
     <>
       {/* <img src={dog.message} alt="iamge do dogo" />
       <button onClick={getDog}>Click</button> */}
-
-      <h1>Hello, {users.name}</h1>
+      <h2>Users List</h2>
         <ul>
             {users.map(user => (
                 <li 
