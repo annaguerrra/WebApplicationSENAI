@@ -1,25 +1,19 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import axios from 'axios'
+import List from './Components/List'
+import Profile from './Components/Profile'
+
+import { BrowserRouter, Route, Router, Routes} from 'react-router-dom'
 
 function App() {
-  const [dog, setDog] = useState({})
-
-  useEffect(() => {
-    getDog();
-  }, [])
-
-  const getDog = async () => {
-    const response = await axios.get('https://dog.ceo/api/breeds/image/random')
-    setDog(response.data)
-  }
-
+  
   return (
     <>
-      <img src={dog.message} alt="iamge do dogo" />
-      <button onClick={getDog}>Click</button>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<List/>}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
+        </Routes>
+    </BrowserRouter>
     </>
   )
 }
