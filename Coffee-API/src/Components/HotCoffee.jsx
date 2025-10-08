@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
+
 function HotCoffee(){
     const [coffees, setCoffee] = useState([])
     const navigate = useNavigate()
@@ -24,21 +25,24 @@ function HotCoffee(){
 
     return(
     <>
-        <h2>Choose your Coffee Type</h2>
+        <h1 className="text-amber-100 font-bold">Hot Coffees</h1>
        <ul>
             {coffees.map( hots => (
                 <li
                 key={hots.id}
                 onClick={() => chooseHotType(hots)}
                 style={{cursor: 'pointer', marginBottom: '8px', borderColor: '#d9351c' }}>
-                {hots.id} {hots.title}
+                <h2 className=" text-left text-yellow-200 font-bold">
+                    {hots.id}. {hots.title}
+                </h2>
                 <br />
-                {hots.description}
+                <p className="text-left text-orange-200">{hots.description}</p>
                 <br />
-                {hots.ingredients}
+                <h3 className="text-left text-yellow-800 font-bold"> Ingredients: </h3> 
+                <p className="text-left text-orange-200">{hots.ingredients}</p>
+                
                 <br />
-                <img src={hots.image} alt="" width={"150px"} />
-                <Link to={'/hot'}>Hot Coffees</Link>
+                <img src={hots.image} alt="" width={"250px"} className=" mx-auto flex justify-center items-center" />
                 </li>
                 )
             )}
