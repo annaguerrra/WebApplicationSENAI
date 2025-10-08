@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function HotCoffee(){
     const [coffees, setCoffee] = useState([])
@@ -38,6 +38,7 @@ function HotCoffee(){
                 {hots.ingredients}
                 <br />
                 <img src={hots.image} alt="" width={"150px"} />
+                <Link to={'/hot'}>Hot Coffees</Link>
                 </li>
                 )
             )}

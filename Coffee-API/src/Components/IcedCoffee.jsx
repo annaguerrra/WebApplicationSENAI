@@ -35,6 +35,7 @@ function IcedCoffee(){
                 {iceds.ingredients}
                 <br />
                 <img src={iceds.image} alt="" width={"150px"} />
+                <Link to={'/iced'}>Iced Coffees</Link>
                 </li>
                 )
             )}
