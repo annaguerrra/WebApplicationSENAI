@@ -1,41 +1,33 @@
 *{
-    margin: 0px 0px 100px 0px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box
 }
+body{
+    display: flex; /* main content in a flex model*/
+    flex-direction: column; /* organize the rows under the other*/
+    align-items: center; /* centralize the axis rows */
+    gap: 40px; /* spacing between the rows */
+    padding: 40px; /* internal spacing between the content and the screen edges */
+}
 
-.container{
-    display: flex;
-    flex-direction: column;
+.line{
+    display: flex; /* organize the blue squares in a flex model */
+    justify-content: center; /* centralize the group of squares */
 }
 
 .BlueSquare{
-    height: 300px;
+    display: flex; /* allows organize each orange square inside of the blue one */
+    justify-content: space-between;
     width: 300px;
-    background-color: rgb(0, 137, 201);
-    display: flex;
+    height: 300px;
+    padding: 10px; /* internal space between the content and the square edges*/
+    
+    background-color: royalblue;
 }
 
 .OrangeSquare{
-    height: 100px;
     width: 100px;
+    height: 100px;
     background-color: orange;
-}
-
-.Line1{
-    display: flex;
-    justify-content: space-between;
-    height: 33.3%;
-}
-
-.Line2{
-    display: flex;
-    justify-content: space-between;
-    height: 33.3%;
-}
-
-.Line3{
-    display: flex;
-    justify-content: space-between;
-    height: 33.3%;
 }

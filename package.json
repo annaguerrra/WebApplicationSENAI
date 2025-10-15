@@ -1,6 +1,11 @@
 {
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.12.2",
-    "react-router-dom": "^7.9.2"
+    "browser": "^0.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.9.4",
+    "tailwindcss": "^4.1.14"
   }
 }
